@@ -38,6 +38,7 @@ import SavedLikedArticles from './account/SavedLikedArticles';
 import CreateArticleModalComponent from './dispute/article/CreateArticleModalComponent';
 import { setSecureToken, getSecureToken, removeSecureToken } from './authentication/secureStorage';
 import Privacy from './Privacy';
+import { Analytics } from '@vercel/analytics/react';
 
 const BACKEND_URL = "https://api.anyvoice.world";
 
@@ -1196,6 +1197,7 @@ function App() {
         <Route path="/:specialPath*" element={<SpecialRouteHandler />} />
         <Route path="*" element={<ProtectedRoute><MainMenu/></ProtectedRoute>} />
       </Routes>
+      <Analytics />
     </Router>
   );
 }
