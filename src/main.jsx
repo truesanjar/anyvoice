@@ -4,6 +4,7 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import './i18n';
+import { Analytics } from "@vercel/analytics/vue"
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
